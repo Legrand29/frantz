@@ -1,0 +1,23 @@
+{
+  "name": "frantz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Legrand29/frantz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Legrand29/frantz/issues"
+  },
+  "homepage": "https://github.com/Legrand29/frantz#readme",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
