@@ -1,0 +1,331 @@
+@import 'utilities';
+@import 'config';
+@import 'mobile';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialized;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: $text-color;
+    background-color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: inherit;
+    font-weight: 300;
+    line-height: 1.1;
+    color: $heading-color;
+}
+
+p.lead {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// Navigation
+nav {
+    .navbar-brand {
+        color: $primary-color !important;
+    }
+
+    .navbar-nav {
+        padding-right: 30px;
+
+        .nav-item {
+
+            .nav-link {
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    color: $primary-color !important;
+                }
+
+                i {
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    border: 1px solid $blue-light;
+                    border-radius: 50% !important;
+                    background-color: $blue-light;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    top: 23px;
+                    right: 25px;
+                }
+
+                .fab {
+                    padding: 10px;
+                    position: absolute;
+                }
+            }
+        }
+
+        .active a {
+            color: $primary-color !important;
+        }
+    }
+}
+
+
+// Intro Section
+.intro {
+    background: url(../images/wordpress-themes/facebook-comments.jpg);
+    background-size: cover;
+    background-position: center;
+
+    height: 90vh;
+
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        color: white;
+        height: 100%;
+        width: 50%;
+        margin: auto;
+
+        span {
+            color: $primary-color;
+        }
+    }
+}
+
+// About Section
+.about {
+    .title {
+        margin-top: -30px;
+    }
+
+    .lead {
+        color: $heading-color;
+    }
+
+    span {
+        color: $primary-color;
+        letter-spacing: 2px;
+        font-weight: bolder;
+
+        i {
+            font-size: 11px;
+        }
+    }
+
+    &-inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+
+        h5 {
+            color: $blue-light;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+// Featured One Section 
+// .featured-one {
+//     .service-1 {
+//                 background: $background-color;
+//                 border-radius: 5px;
+//                 position: relative;
+//                 transition: all .3s ease-in-out;
+
+//                 .icon {
+//                     padding-top: 30px;
+//                     margin-bottom: -30px;
+//                     color: blue;
+//                 }
+
+//                 &:hover {
+//                     background: black;
+//                     color: white;
+
+//                     h4 {
+//                         color: white;
+//                     }
+//                 }
+//             }
+//         }
+
+// Wordpress Section
+.wordpress {
+    background-color: $light-color;
+
+    &-inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+
+        .wordpress-text {
+            .title {
+                color: $main-color;
+                position: relative;
+            }
+
+            button {
+                position: absolute;
+                left: 220px;
+            }
+        }
+
+        .choosing-theme {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            i {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+// Call To Action Brand Section
+.brands {
+
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+
+    h2 {
+        text-align: center;
+        padding: 20px;
+    }
+
+    // Styling
+    .slider {
+        background: white;
+        height: 100px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            padding: 0 30px;
+        }
+
+        &::before,
+        &::after {
+            @include white-gradient;
+            content: "";
+            height: 100px;
+            position: absolute;
+            width: 200px;
+            z-index: 2;
+        }
+
+        &::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
+
+        &::before {
+            left: 0;
+            top: 0;
+        }
+
+        .slide-track {
+            animation: scroll $animationSpeed linear infinite;
+            display: flex;
+            width: calc(250px * 14);
+        }
+
+        .slide {
+            height: 100px;
+            width: 250px;
+        }
+    }
+}
+
+
+//Facebook Section
+.facebook {
+    background-color: $light-color;
+
+    &-inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        strong {
+            color: $main-color;
+            font-size: 12px;
+        }
+    }
+}
+
+// Theme Section
+// .themes {
+//     background: $background-color;
+
+//     .img-site {
+//         .tab-pane {
+//             width: 100%;
+//             height: 80vh;
+
+//             img {
+//                 height: 100%;
+//                 width: 100%;
+//             }
+//         }
+//     }
+// }
+
+//Footer Section
+footer {
+    .footer-inner {
+        display: grid;
+        grid-template-columns: 70% 300px;
+
+        .footer-left {
+            width: 40%;
+        }
+
+        .footer-right {
+            color: white !important;
+
+            ul {
+                li {
+                    padding: 10px;
+                }
+
+                a {
+                    color: $text-color;
+                }
+            }
+        }
+    }
+
+    .footer-main {
+        background-color: #000;
+
+        strong {
+            color: $primary-color;
+        }
+    }
+}

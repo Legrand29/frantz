@@ -1,0 +1,83 @@
+// Color
+$background-color: #e3f2fd;
+$primary-color: #5ee45e;
+$main-color: #8ec0ff;
+$text-color: #868e96;
+$heading-color: #212529;
+$light-color: #fafafa;
+$fav-color: #5d6d7e;
+
+@mixin main-shadow {
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+//TESTING
+//Params
+$white: #FBFBFB;
+$black: #2B2B2B;
+$black-light: rgba(31, 31, 31, 0.98);
+$blue: #08367E;
+$blue-light: #04ABFF;
+$grey: #363636;
+$header-height: 3.75rem;
+$nav-toggle-height: 3rem;
+$side-icon-padding: .8rem;
+$icon-width: 2rem;
+$logo-width: 2rem;
+$trans-bounce: all cubic-bezier(0.47, 0.07, 0.21, 1.4) .2s;
+$breakpoint: 720px;
+
+//Animation
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes hoverIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes hoverOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(110%);
+    }
+}
+
+
+@mixin white-gradient {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7))
+    }
+}
